@@ -23,6 +23,13 @@ eventHub.addEventListener("click", (clickEvent) => {
       },
     });
     eventHub.dispatchEvent(customEvent);
+  } else if (clickEvent.target.id === "sideshowTicket") {
+    const customEvent = new CustomEvent("sideshowTicketPurchased", {
+      detail: {
+        numberOfTickets: 1,
+      },
+    });
+    eventHub.dispatchEvent(customEvent);
   }
 });
 
@@ -32,6 +39,7 @@ export const TicketBooth = () => {
         <button id="rideTicket">Ride Ticket</button>
         <button id="foodTicket">Food Ticket</button>
         <button id="gameTicket">Game Ticket</button>
+        <button id="sideshowTicket">Sideshow Ticket</button>
         </div>
     `;
 };
