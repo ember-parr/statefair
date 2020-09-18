@@ -10,7 +10,7 @@ export const FoodTicketHolders = () => {
   });
 };
 
-const addTicketToColumn = (type) => {
+const addTicketToColumn =(type)=> {
   contentTarget.innerHTML += `
       <div class="${type} person"></div>
       `;
