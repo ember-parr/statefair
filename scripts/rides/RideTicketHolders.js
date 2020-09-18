@@ -3,12 +3,15 @@ const eventHub = document.querySelector("#state-fair");
 
 export const RideTicketHolders = () => {
   eventHub.addEventListener("rideTicketPurchased", (customEvent) => {
-    addTicketToColumn();
+    addTicketToColumn("rider");
+  });
+  eventHub.addEventListener("fullPackageTicketPurchased", (customEvent) => {
+    addTicketToColumn("bigSpender");
   });
 };
 
-const addTicketToColumn = () => {
+const addTicketToColumn = (type) => {
   contentTarget.innerHTML += `
-    <div class="rider person"></div>
-    `;
+      <div class="${type} person"></div>
+      `;
 };

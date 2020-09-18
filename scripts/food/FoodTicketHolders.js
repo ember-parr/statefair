@@ -3,12 +3,15 @@ const eventHub = document.querySelector("#state-fair");
 
 export const FoodTicketHolders = () => {
   eventHub.addEventListener("foodTicketPurchased", (customEvent) => {
-    addTicketToColumn();
+    addTicketToColumn("eater");
+  });
+  eventHub.addEventListener("fullPackageTicketPurchased", (customEvent) => {
+    addTicketToColumn("bigSpender");
   });
 };
 
-const addTicketToColumn = () => {
+const addTicketToColumn = (type) => {
   contentTarget.innerHTML += `
-      <div class="eater person"></div>
+      <div class="${type} person"></div>
       `;
 };
