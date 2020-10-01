@@ -43,11 +43,11 @@ eventHub.addEventListener("click", (clickEvent) => {
 export const TicketBooth = () => {
   contentTarget.innerHTML = `
         <div class="ticketBooth">
-        <button id="rideTicket">Ride Ticket</button>
-        <button id="foodTicket">Food Ticket</button>
-        <button id="gameTicket">Game Ticket</button>
-        <button id="sideshowTicket">Sideshow Ticket</button>
-        <button id="fullPackageTicket">Full Package Ticket</button>
+        <button id="rideTicket" class="OneTicket">Ride Ticket</button>
+        <button id="foodTicket" class="OneTicket">Food Ticket</button>
+        <button id="gameTicket" class="OneTicket">Game Ticket</button>
+        <button id="sideshowTicket" class="OneTicket">Sideshow Ticket</button>
+        <button id="fullPackageTicket" class="OneTicket">Full Package Ticket</button>
         </div>
     `;
 };
